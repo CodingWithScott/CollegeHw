@@ -1,0 +1,20 @@
+#lang racket
+
+
+(define (test)
+  (define ls)
+  (call-with-input-file "animalfarm.txt"
+    (lambda (file)
+      (let loop ((i 0) (word (read-word file)))
+        (when word
+          (when (= 0 (modulo i 10)) (newline))
+          (append word ls)
+          (loop (+ i 1) (read-word file)))))))
+
+; Trying to make a recursive function that reads through input text file to make a list of every word.
+; Base case will return an empty list, recurse case will take curr word and append to list and then 
+; call itself again with rest of list.
+(define (makebiglist ls)
+  (call-with-input-file "animalfarm.txt"
+    (lambda (file)
+      

@@ -1,0 +1,13 @@
+(hash-has-key   hash map name     key name)
+returns if there is a key of 'value' in a given hash map
+
+make-hash
+makes a new hash table
+
+(hash-set!     hash map name       key name        new value)
+sets the value of the given hash map with a given key
+
+(hash-ref!      hash map name         key name       "")
+gets the value from a given table associated with a given key name
+there is some weird property at the end, I have no idea what it does,
+but just put "" there and it should work fine. 
