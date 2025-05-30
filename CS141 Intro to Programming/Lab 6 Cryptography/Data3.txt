@@ -1,0 +1,51 @@
+After “do not call” lists became popular, more than 90 percent of people who signed up reported fewer annoying telemarketing calls. Now, privacy advocates are pushing for a similar “do not track” feature that would let Internet users tell Web sites to stop surreptitiously tracking their online habits and collecting clues about age, salary, health, location and leisure activities.
+
+That proposal and other ideas to protect online privacy are setting up a confrontation among Internet companies, federal regulators, the Obama administration and Congress over how strict any new rules should be.
+
+In the next few weeks, both the Federal Trade Commission and the Commerce Department are planning to release independent, and possibly conflicting, reports about online privacy.
+
+Top Commerce officials have indicated that the department favors letting the industry regulate itself, building on the common practice of user agreements where companies post their privacy policies online or consumers check a box agreeing to abide by them.
+
+Top trade commission officials, however, have indicated they are exploring a stricter standard, one that requires a “do not track” option on a Web site or browser similar to the “do not call” lists.
+
+The two agencies have even tangled over which will release its report first, a decision that could set the tone for the clash to follow. People close to the talks say that, at least for now, the Commerce Department has been given the nod, provided it can complete its report soon.
+
+Consumer advocates worry that the competing agendas of economic policy makers in the Obama administration, who want uniform international standards, and federal regulators, who are trying to balance consumer protection and commercial rights, will neglect the interests of people most affected by the privacy policies. “I hope they realize that what is good for consumers is ultimately good for business,” said Susan Grant, director of consumer protection at the Consumer Federation of America.
+
+In addition, the major online companies have the reports in their sights, worried over a raft of potential new regulations. They would prefer that the industry continue to police itself.
+
+“Targeted ads are helpful and ad competition is helpful,” said Eric E. Schmidt, the chief executive of Google, which owns the online advertising exchange DoubleClick. In a conversation last week at The New York Times, Mr. Schmidt said that the explosion in online consumer monitoring was increasing friction about how strict the privacy limits should be. And, he added, “it’s going to get a lot worse.”
+
+The White House, meanwhile, has broader goals. It set up its own interagency panel that will look at how to protect consumers while also making United States companies more competitive internationally. It also wants to ensure that any restrictions do not impede law enforcement and national security efforts.
+
+Congress also is expected to intervene, and this may be one area where there is bipartisan cooperation. The House Energy and Commerce Committee, which oversees the trade commission and privacy issues, will soon have a Republican at its head, but members of both parties in the House and Senate have recently called on companies to account for intrusions or breaches of consumer privacy.
+
+Which agency or group leads the debate could go a long way toward determining the result.
+
+“There is going to be a lot of confusion over the competing proposals and which version Congress and the American people should pay attention to,” said Jeffrey Chester, executive director of the Center for Digital Democracy, a consumer advocacy group. “We especially fear a policy that is designed to advance the competitive positions of U.S. companies and will undermine new pro-consumer protections at the F.T.C.”
+
+Officially, Commerce Department and trade commission officials say they see the two reports as complementary. The commission will most likely address “privacy by design,” or how privacy features may be built into browsers or Web sites. It will also encourage greater transparency about when data is being collected and how it will be used, and the need for clearly worded privacy or user notices.
+
+The Commerce Department will focus on global and domestic privacy laws, and will have a broad perspective on privacy issues, officials say. In an address last month at a meeting of privacy commissioners in Jerusalem, Lawrence E. Strickling, an assistant Commerce secretary, said he believed in “a strong role for voluntary but enforceable codes of conduct.”
+
+Jon Leibowitz, the trade commission’s chairman, told Congress in July that the commission was exploring a stronger standard — whether to propose a “do not track” feature. Julie Brill, an F.T.C. commissioner, said she would personally favor such a mechanism.
+
+According to Lee Tien, a senior attorney with the Electronic Frontier Foundation, a “do not track” system most likely would be built into a Web browser or function as a plug-in. It would send a signal telling a Web site and the content providers and advertisers that the user did not want to be tracked.
+
+That would differ from current browser settings, which can prevent the placement of cookies on a computer. “It’s a policy complication, not a technological complication,” Mr. Tien said.
+
+Marketers hate the idea. “You simply can’t just turn off tracking,” said Mike Zaneis, a vice president at the Interactive Advertising Bureau. “That’s the way interconnected systems talk to each other.” Such a mechanism, he added, would be “troubling and difficult to implement at a technology level.”
+
+Consumer advocates worry that the Commerce Department will look more after businesses than after consumers, perhaps undermining the ability of the trade commission to enforce the rules, whatever they turn out to be. The Commerce Department announced its intention to conduct its own privacy study in April, roughly six months after the trade commission began its project, leaving consumer advocates thinking that the two bureaucracies didn’t see eye to eye.
+
+“The Commerce Department has never been a consumer advocacy agency,” said Edmund Mierzwinski, consumer program director for the United States Public Interest Research Group. “They generally take the view of protecting special interests.”
+
+Commerce Department officials say they have planned to address privacy rights since the 2008 presidential campaign. “In the 1990s, the Commerce Department had an extremely prominent role in developing what we think of as Internet policy, and we are reinvigorating that historical role,” said Marc Berejka, a senior policy adviser there.
+
+David C. Vladeck, the director of the bureau of consumer protection at the F.T.C., said the agency would keep its focus on enforcing the law. “Because we have the franchise on policy enforcement, we will undoubtedly retain a leading voice on privacy policy,” Mr. Vladeck said.
+
+While both agencies say they will propose strengthening privacy protections, the Obama administration is also worried about the prospect of tougher international privacy standards.
+
+Last week, the European Commission called for stronger Internet privacy protections and for an overhaul of the European Union’s privacy rules to address social networking and targeted ads. European nations can also draft their own standards.
+
+
