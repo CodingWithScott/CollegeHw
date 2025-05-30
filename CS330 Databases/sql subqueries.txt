@@ -1,0 +1,54 @@
+# Get industry names
+select distinct(Industry)
+from company
+order by Industry ASC;
+
+# Get usable tickers (>= 150 trading days)
+select Ticker, min(TransDate), max(TransDate), count(distinct TransDate) as tradingDays
+from company natural join pricevolume
+where Industry = 'Telecommunications Services'
+group by Ticker
+having tradingDays >= 150
+order by Ticker;
+
+# Get start date
+select Ticker, max(startDate)
+from (
+	select Ticker, min(TransDate) as startDate, count(distinct TransDate) as tradingDays
+	from company natural join pricevolume
+	where Industry = 'Telecommunications Services'
+	#order by TransDate ASC
+	group by Ticker
+	having tradingDays >= 150
+	
+	) as MinTradeDays;
+	
+# Get end date
+select min(endDate)
+from (
+	select Ticker, max(TransDate) as endDate, count(distinct TransDate) as tradingDays
+	from company natural join pricevolume
+	where Industry = 'Telecommunications Services'
+	group by Ticker
+	having tradingDays >= 150
+) as MaxTradeDays;
+
+# Find the trade interval (trades between start and end date)
+select Ticker, min(TransDate), max(TransDate), count(distinct TransDate) as tradingDays
+from company natural join pricevolume
+where Industry = 'Telecommunications Services' and 
+	TransDate >= '2005.02.09' and TransDate <= '2014.01.02'
+group by Ticker
+having tradingDays >= 150
+order by Ticker;
+
+# Find number of common trading days
+select min(tradingDays) from (
+	select Ticker, min(TransDate), max(TransDate), count(distinct TransDate) as tradingDays
+	from company natural join pricevolume
+	where Industry = 'Telecommunications Services' and 
+		TransDate >= '2005.02.09' and TransDate <= '2014.01.02'
+	group by Ticker
+	having tradingDays >= 150
+	order by Ticker) 
+as minTradingDays;
