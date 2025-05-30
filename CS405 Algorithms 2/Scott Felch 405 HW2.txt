@@ -1,0 +1,7 @@
+Scott Felch
+July 9, 2015
+CS 405
+HW #2
+To accomplish this task I decided to take the simplest approach I could think of, a greedy algorithm, and give it a slight improvement in effectiveness by adding a 2-step look ahead. I decided to treat the city grid like a graph, with each street corner being represented by a node numbered 1-25 from upper left to bottom right. These I then represented in an adjacency matrix. A 0 is used to indicate no point of interest between two nodes, a 1 indicates a point to gain, and a -1 is used as a sentinel value to ensure the algorithm wraps around from right to left when hitting the eastern boundary.
+
+

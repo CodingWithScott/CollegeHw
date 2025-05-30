@@ -1,0 +1,51 @@
+Scott Felch
+July 9, 2015
+CS 405
+HW #2
+
+To accomplish this task I decided to take the simplest approach I could think of, a greedy algorithm, and give it a slight improvement in effectiveness by adding a 2-step look ahead. I decided to treat the city grid like a graph, with each street corner being represented by a node numbered 1-25 from upper left to bottom right. These I then represented in an adjacency matrix. A 0 is used to indicate no point of interest between two nodes, a 1 indicates a point to gain, and a -1 is used as a sentinel value to indicate inaccessible paths and ensure the algorithm wraps around from right to left when hitting the eastern boundary.
+
+The following pseudocode (which looks very similar to C but is not C) is approximately how the algorithm would work. There would need to be some slight tweaks to get it to be fully functional but I think it conveys the essence of my idea. 
+
+#define EAST  1
+#define SOUTH 5
+#define NUM_NODES 25
+
+/* Assign current node to Start */
+int curr = 1;
+int current_score = 0;    
+
+/* Potential score for each possible 2 move sequence */
+int score_ss, score_se, score_ee = 0;
+
+/* Store the adjacency matrix */
+graph = int[NUM_NODES][NUM_NODES];
+
+/* While not at final destination (accepting state) use look-ahead
+   to determine where to advance to. Each loop iteration is 2 jumps. */
+while (curr != 25) { 
+    /* Look ahead each direction for potential score */
+    score_ss += graph(curr,(curr+SOUTH)) 
+              + graph((curr+SOUTH),(curr+(2*SOUTH));
+    score_se += graph(curr,(curr+SOUTH)) 
+              + graph((curr+SOUTH),(curr+EAST));
+    score_ee += graph(curr,(curr+EAST)) 
+              + graph((curr+EAST),(curr+(2*EAST));
+
+    int next_score = max(score_ss, score_se, score_ee);
+
+    case:
+        /* Update score and position, 2 jumps each iteration */
+        (next_score == score_ss)
+            curr_score += score_ss
+            curr + SOUTH + SOUTH;
+        (next_score == score_se)
+            curr_score += score_se
+            curr += SOUTH + EAST;
+        (next_score == score_ee)
+            curr_score += score_ee
+            curr += EAST + EAST;
+
+    /* Situations where moverent in a direction is not permitted
+       will never be chosen beacuse of the -1 score disincentive. */
+}
