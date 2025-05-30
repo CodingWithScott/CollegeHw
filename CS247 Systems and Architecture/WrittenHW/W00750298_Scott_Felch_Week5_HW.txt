@@ -1,0 +1,73 @@
+/*  Scott Felch
+	W00750298
+	felchs@students.wwu.edu
+	9 February 2013
+	HW 3.60
+	
+	Consider the following source code, where R, S, and T are constants declared
+	with #define:
+	
+	int A[R][S][T];
+	
+	int store_ele(int i, int j, int k, int *dest)
+	{
+		*dest = A[i][j][k];
+		return sizeof(A);
+	}
+	
+	In compiling this program, GCC generates the following assembly code:
+	i at %ebp+8, j at %ebp+12, k at %ebp+16, dest at %ebp+20
+movl		12(%ebp), %edx
+leal		(%edx,%edx,4), %eax
+leal		(%edx,%eax,2), %eax
+imull		$99, 8(%ebp),  %edx
+addl		16(%ebp),	   %eax
+movl		A(,%eax,4),	   %edx
+movl		20(%ebp),	   %eax
+movl		%edx,		  (%eax)
+movl		$1980,		   %eax
+
+
+	roughly paraphrased
+j in edx
+eax = 5j
+eax = edx + 2*eax						// eax = j + 10j = 11j
+i*99 -> edx								// edx = 99i
+edx + eax -> eax						// eax = eax + edx,		eax = 11j + 99i
+add k -> eax							// eax = eax + k		eax = 11j + 99i + k
+something?? (4*eax??) -> edx			// mult by 4 since int = 4 bytes
+move dest to eax 						// eax = dest
+edx -> memory location stored in eax	// store 99i in memory
+return sizeofA
+	*/
+	
+	
+R = total # of depth levels
+S = total # of columns
+T = total # of rows
+
+L = element size (2, 4, 8, etc) 
+
+i = location of depth
+j = location of column
+k = location of row
+
+A.	Address = Base_address + (((depth_index * col_size + col_index) * row_size) + row_index) * elem_size
+	 
+	 	which simplifies to...
+	 
+	&A[i][j][k] = (R * (i * S + j) * T) + k) * L
+	
+B.	1980 =  R*(i*99 + j*11  + k) * 4	// 4 = elem_size, because array holds ints
+	495  = (R*(i*99 + j*11)) + k
+	495  = (R*(9i + j)* 11)   + k
+	
+	So S=9 and T=11, from this. Divide 495 by S and T to get R.
+	495 / 9 = 55
+	55 / 11 = 5
+	R       = 5
+
+	// Now compare this to address formula to determine values for R, S, and T
+	R = 5
+	S = 9
+	T = 11

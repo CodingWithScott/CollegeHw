@@ -1,0 +1,55 @@
+/*  Scott Felch
+	W00750298
+	felchs@students.wwu.edu
+	20 January 2013
+	HW 2.58
+
+Prompt:
+	Write a procedure "is_little_endian" that will return 1 when compiled and 
+	run on a little-endian machine, and will return 0 when comipiled and run on
+	a big-endian machine. This program should run on any machine, regardless of
+	its word size.
+
+	See p. 40 for more information.
+*/
+
+#include <stdio.h>
+
+int main() {
+	int is_little_endian(void) {
+		// Test value will be stored in an int, 4 bytes long.
+		int test_value = 1;	
+		/* Result will be either 0 or 1. Initialized to 9001 so I'll know
+		   for suresies if something is broken. */
+		int result = 9001;
+
+		/* Pointer will be of type char, 1 byte long, so I can look
+		at individual bytes of my integer in memory. */
+		char* pointer;
+		
+		// Point the pointer at 1st by of test_value.
+		pointer = &test_value;
+
+		/* Typecast the 1st byte into an int (from a char), store in result.
+		 If machine is Big Endian, this will have stored a 0. If machine is 
+		 Little Endian, this will have stored a 1.	 */
+		result = (int) pointer[0];
+		
+		return result;
+	}
+	
+	int output = 9001;
+	output = is_little_endian();
+	if (output == 0)
+	{
+		printf("This is a Big Endian machine.");
+		printf("\n");
+	}
+	else if (output == 1)
+	{
+		printf("This is a Little Endian machine.");
+		printf("\n");
+	}	
+	
+	return 0;
+}

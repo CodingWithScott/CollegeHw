@@ -1,0 +1,62 @@
+Scott Felch
+19 February 2013
+CSCI 247
+Written HW Week 6
+
+3.66
+A:
+	1  00000000 <test>					function setup stuff
+	2  push 	%ebp					""
+	3  mov		%esp,%ebp				""
+	4  mov		0x8(%ebp),%eax			store i in eax
+									//eax = i
+	5  mov		0xc(%ebp),%ecx			store bp* in ecx
+									//ecx = bp*
+	6  lea		(%eax,%eax,4),%eax		store 5i in eax
+									//eax = 5i
+	7  add		0x4(%ecx,%eax,4),%eax	store (4 + ecx + 4*(eax)) in eax
+									meaning, 4 + bp + 4*(5i) = 4 + bp + 20i
+									//eax = 4 + bp + 20i
+	8  mov		0xb8(%ecx),%edx			store 184 bytes off of ecx in edx
+									//edx = bp + 184
+	9  add		(%ecx),%edx				add ecx to edx
+									//edx = bp*
+	10 mov		%edx,0x8(%ecx,%eax,4)	move edx to location 8 + ecx + 4*(eax)
+									meaning, 8 + bp* + 4 *(4 + bp + 20i) =
+											12 + 2bp + 20i
+	11 pop		%ebp					function return stuff
+	12 ret								""
+
+B_struct contains an int Left, which is 4 bytes.
+BP is a pointer to beginning of an array A of a_structs, size CNT. Don't know CNT yet,
+	so still don't know size of A. It starts at bp+4 bytes.
+Then there's an int Right, which is 4 bytes. It starts at a[i]+4.
+Line 8 in the assembly indicates that Right starts at bp + 184. If you subtract 184 - 4,
+	then you get total size of a[] being 180 bytes.
+Size of individual elements in the array is indicated by line 7, where bp+4+20i where 20
+	is the number of bytes of each element.
+So divide 180 / 20, get 9 elements. 
+
+	CNT = 9.
+	
+B.	A_struct must be 20 bytes, and contains two variables, idx and x. 
+	Know from line 11 of C code that X is an array of some sort.
+	Know from line 10 of assembly
+		// copy info from paper to here later
+	
+	typedef struct {
+		double idx;
+		int x[3];
+	} a_struct;
+
+3.67
+A. What would be the offsets (in bytes) of the following fields?
+	e1.p:   	4 bytes	(32-bit ptr)
+	e1.y:		4 bytes (32-bit int)
+	e2.x:		4 bytes (32-bit int)
+	e2.next:	4 bytes (32-bit ptr)
+	
+B. How many total bytes would the structure require?
+	16 bytes
+	
+C. up->e2.next->e1.x = *(up->e2.next->e1.p) - up->e2.y;

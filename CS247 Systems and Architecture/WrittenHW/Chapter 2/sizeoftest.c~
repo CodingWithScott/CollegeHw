@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int wordsize = 0;
+	
+	wordsize = sizeof(int)<<3;
+	printf("Word size:  ");	
+	printf("%i", wordsize);
+	printf("\n\n");
+    return 0;
+}

@@ -1,0 +1,20 @@
+I was trying to give Tina Fey more material.
+1 2 4 7 11 16
+0 p 781				// needs to be 3 digits
+					// 1st digit: greater than 2.  3 is good
+					// 2nd character: above 7, or alphabetically after G 
+					// 3rd digit: 518?  114?
+2 13				// 2 because of comparison on 0x40114d
+					// 13 because of comparison on 0x40117c
+5 115				// format: %d %d
+					// 1st compare: greater than 1 digit, 2 < x <= 14
+					// Try values 2-14 to get past loop, once past
+					// the loop then read $exc to get 2nd digit
+					// 1st digit: brute forced up from 1 to 5, got through loop
+					// 2nd digit: print $ecx after getting through loop, ecx contains needed digit
+1 2 3 4 5 6
+2 3 4 5 6 1
+5 6 4 8 9 2
+6 5 4 3 2 1 
+5 4 3 2 1 6
+4 3 2 1 6 5

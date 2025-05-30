@@ -1,0 +1,15 @@
+55 68 35 e8
+
+
+e8 35 68 55        front of string
+
+
+0x804e104     location of global value
+
+
+movl   $0x259209cc,0x804e104
+
+address of string is stored in %eax right after call to Gets, but before it gets crushed to 1
+	eax=	0x55 68 34 08
+			  08 34 68 55  little endian
+	

@@ -1,0 +1,14 @@
+
+assembly.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <.text>:
+   0:	c7 05 04 e1 04 08 cc 	movl   $0x259209cc,0x804e104
+   7:	09 92 25 
+   a:	68 0c 8c 04 08       	push   $0x8048c0c
+   f:	c3                   	ret    
+   
+   
+c7 05 04 e1 04 08 cc 09 92 25 68 0c 8c 04 08 c3

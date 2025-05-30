@@ -1,0 +1,152 @@
+
+bufbomb:     file format elf32-i386
+
+SYMBOL TABLE:
+55586000 l    d  bstack	00000000              bstack
+08048174 l    d  .interp	00000000              .interp
+08048188 l    d  .note.ABI-tag	00000000              .note.ABI-tag
+080481a8 l    d  .note.gnu.build-id	00000000              .note.gnu.build-id
+080481cc l    d  .gnu.hash	00000000              .gnu.hash
+080481fc l    d  .dynsym	00000000              .dynsym
+0804846c l    d  .dynstr	00000000              .dynstr
+080485de l    d  .gnu.version	00000000              .gnu.version
+0804862c l    d  .gnu.version_r	00000000              .gnu.version_r
+0804866c l    d  .rel.dyn	00000000              .rel.dyn
+0804868c l    d  .rel.plt	00000000              .rel.plt
+0804879c l    d  .init	00000000              .init
+080487d0 l    d  .plt	00000000              .plt
+08048a00 l    d  .text	00000000              .text
+0804a0fc l    d  .fini	00000000              .fini
+0804a118 l    d  .rodata	00000000              .rodata
+0804acb8 l    d  .eh_frame_hdr	00000000              .eh_frame_hdr
+0804adbc l    d  .eh_frame	00000000              .eh_frame
+0804cf14 l    d  .ctors	00000000              .ctors
+0804cf1c l    d  .dtors	00000000              .dtors
+0804cf24 l    d  .jcr	00000000              .jcr
+0804cf28 l    d  .dynamic	00000000              .dynamic
+0804cff0 l    d  .got	00000000              .got
+0804cff4 l    d  .got.plt	00000000              .got.plt
+0804d0a0 l    d  .data	00000000              .data
+0804e0e0 l    d  .bss	00000000              .bss
+00000000 l    d  .comment	00000000              .comment
+00000000 l    df *ABS*	00000000              stack.c
+00000000 l    df *ABS*	00000000              crtstuff.c
+0804cf14 l     O .ctors	00000000              __CTOR_LIST__
+0804cf1c l     O .dtors	00000000              __DTOR_LIST__
+0804cf24 l     O .jcr	00000000              __JCR_LIST__
+08048a30 l     F .text	00000000              __do_global_dtors_aux
+0804e0ec l     O .bss	00000001              completed.6159
+0804e0f0 l     O .bss	00000004              dtor_idx.6161
+08048a90 l     F .text	00000000              frame_dummy
+00000000 l    df *ABS*	00000000              crtstuff.c
+0804cf18 l     O .ctors	00000000              __CTOR_END__
+0804b1bc l     O .eh_frame	00000000              __FRAME_END__
+0804cf24 l     O .jcr	00000000              __JCR_END__
+0804a0d0 l     F .text	00000000              __do_global_ctors_aux
+00000000 l    df *ABS*	00000000              bufbomb.c
+08048ac0 l     F .text	00000057              usage
+0804a478 l     O .rodata	00000010              trans_char
+08048e3d l     F .text	0000007e              launch
+00000000 l    df *ABS*	00000000              support.c
+0804e0c0 l     O .data	00000014              level_counts
+00000000 l    df *ABS*	00000000              driverlib.c
+08049400 l     F .text	00000119              rio_readlineb
+00000000 l    df *ABS*	00000000              gencookie.c
+0804cf14 l       .ctors	00000000              __init_array_end
+0804cf28 l     O .dynamic	00000000              _DYNAMIC
+0804cf14 l       .ctors	00000000              __init_array_start
+0804cff4 l     O .got.plt	00000000              _GLOBAL_OFFSET_TABLE_
+0804a0c0 g     F .text	00000002              __libc_csu_fini
+0804a0c2 g     F .text	00000000              .hidden __i686.get_pc_thunk.bx
+08048d00 g     F .text	0000001e              getbufn
+00000000       F *UND*	00000000              read@@GLIBC_2.0
+0804d0a0  w      .data	00000000              data_start
+00000000       F *UND*	00000000              srandom@@GLIBC_2.0
+0804e120 g     O .bss	00000004              stack_top
+0804e0e0 g     O .bss	00000004              stderr@@GLIBC_2.0
+08048c0c g     F .text	0000005a              bang
+0804e0d4 g       *ABS*	00000000              _edata
+00000000       F *UND*	00000000              signal@@GLIBC_2.0
+0804a0fc g     F .fini	00000000              _fini
+00000000       F *UND*	00000000              alarm@@GLIBC_2.0
+0804e108 g     O .bss	00000004              success
+00000000       F *UND*	00000000              _IO_getc@@GLIBC_2.0
+08049fbc g     F .text	00000024              hash
+08049544 g     F .text	000007e9              submitr
+0804e118 g     O .bss	00000004              notify
+08049d64 g     F .text	000001ca              init_driver
+08048d92 g     F .text	00000018              getbuf
+00000000       F *UND*	00000000              fwrite@@GLIBC_2.0
+55586000 g     O bstack	00100000              _reserved
+00000000       F *UND*	00000000              strcpy@@GLIBC_2.0
+0804cf20 g     O .dtors	00000000              .hidden __DTOR_END__
+00000000       F *UND*	00000000              getpid@@GLIBC_2.0
+08048b3e g     F .text	00000027              seghandler
+00000000       F *UND*	00000000              gethostname@@GLIBC_2.0
+0804d0a0 g       .data	00000000              __data_start
+00000000       F *UND*	00000000              puts@@GLIBC_2.0
+0804e0f8 g     O .bss	00000004              global_offset
+08048c66 g     F .text	0000009a              Gets
+00000000       F *UND*	00000000              __memmove_chk@@GLIBC_2.3.4
+00000000       F *UND*	00000000              __memcpy_chk@@GLIBC_2.3.4
+00000000  w      *UND*	00000000              __gmon_start__
+00000000       F *UND*	00000000              exit@@GLIBC_2.0
+0804d0a4 g     O .data	00000000              .hidden __dso_handle
+08048bb3 g     F .text	00000059              fizz
+0804a11c g     O .rodata	00000004              _IO_stdin_used
+0804d0c0 g     O .data	00001000              host_table
+00000000       F *UND*	00000000              srand@@GLIBC_2.0
+00000000       F *UND*	00000000              mmap@@GLIBC_2.0
+0804e104 g     O .bss	00000004              global_value
+00000000       F *UND*	00000000              __libc_start_main@@GLIBC_2.0
+00000000       F *UND*	00000000              write@@GLIBC_2.0
+00000000       F *UND*	00000000              getopt@@GLIBC_2.0
+00000000       F *UND*	00000000              strcasecmp@@GLIBC_2.0
+0804a050 g     F .text	00000061              __libc_csu_init
+0804e0e4 g     O .bss	00000004              stdin@@GLIBC_2.0
+00000000       F *UND*	00000000              __isoc99_sscanf@@GLIBC_2.7
+00000000       F *UND*	00000000              memset@@GLIBC_2.0
+00000000       F *UND*	00000000              __strdup@@GLIBC_2.0
+0804ed44 g       *ABS*	00000000              _end
+00000000       F *UND*	00000000              __errno_location@@GLIBC_2.0
+08048a00 g     F .text	00000000              _start
+0804a118 g     O .rodata	00000004              _fp_hw
+0804e140 g     O .bss	00000c01              gets_buf
+0804928b g     F .text	0000016f              validate
+08048ebb g     F .text	000000cb              launcher
+0804e110 g     O .bss	00000004              infile
+08049519 g     F .text	0000002b              sigalrm_handler
+00000000       F *UND*	00000000              rand@@GLIBC_2.0
+08049d2d g     F .text	00000037              init_timeout
+0804e100 g     O .bss	00000004              gets_cnt
+0804e0f4 g     O .bss	00000004              global_save_stack
+0804e0d4 g       *ABS*	00000000              __bss_start
+08048daa g     F .text	00000019              uniqueval
+0804e11c g     O .bss	00000004              userid
+08048f86 g     F .text	000001d9              main
+0804e114 g     O .bss	00000004              autograde
+00000000       F *UND*	00000000              __printf_chk@@GLIBC_2.3.4
+00000000       F *UND*	00000000              munmap@@GLIBC_2.0
+08048b17 g     F .text	00000027              illegalhandler
+08048b8c g     F .text	00000027              smoke
+00000000  w      *UND*	00000000              _Jv_RegisterClasses
+08049f2e g     F .text	0000008d              driver_post
+08048b65 g     F .text	00000027              bushandler
+0804e10c g     O .bss	00000004              cookie
+08049fe0 g     F .text	00000037              check
+00000000       F *UND*	00000000              socket@@GLIBC_2.0
+0804e0fc g     O .bss	00000004              global_nitro
+0804a017 g     F .text	00000032              gencookie
+00000000       F *UND*	00000000              random@@GLIBC_2.0
+0804e0e8 g     O .bss	00000004              optarg@@GLIBC_2.0
+00000000       F *UND*	00000000              gethostbyname@@GLIBC_2.0
+00000000       F *UND*	00000000              connect@@GLIBC_2.0
+0804879c g     F .init	00000000              _init
+00000000       F *UND*	00000000              close@@GLIBC_2.0
+08048d1e g     F .text	00000074              testn
+08049160 g     F .text	0000012b              initialize_bomb
+00000000       F *UND*	00000000              calloc@@GLIBC_2.0
+00000000       F *UND*	00000000              __sprintf_chk@@GLIBC_2.3.4
+08048dc3 g     F .text	0000007a              test
+
+

@@ -1,0 +1,16 @@
+Script started on Thu 17 Jan 2013 12:23:00 PM PST
+bash: alias: ls: not found
+bash: alias: =: not found
+bash: alias: `ls --color': invalid alias name
+felchs@CF414-08:~/Documents$ ls -F
+AAAold/		      employee_class.py   generic_stack.ads~		graphfun.adb~	 little_endian.c~  poop.py
+arm tattoo quote.odt  employee_class.py~  Getting Started With Python/	graphmain.adb~	 pets_class.py~    ryan_graph.adb~
+car_class.py~	      employee_test.py	  graph_components.adb~		graphshit.adb~	 pets.py~	   ryan_graph.ads~
+car_test.py~	      employee_test.py~   graphcomponents.adb~		input.txt~	 pets_test.py~	   typescript
+do for fun.txt	      generic_stack.adb~  graph_components.ads~		little_endian.c  poop/
+felchs@CF414-08:~/Documents$ gnamk[K[Ktmake g[K[K[K[K[K[K[K[K[K[Kls -F[2Pcshd /altpkg/tex/texmf/fonts/tfm/public/cm[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csh[Kpython car_test.py
+python: can't open file 'car_test.py': [Errno 2] No such file or directory
+felchs@CF414-08:~/Documents$ exit
+exit
+
+Script done on Thu 17 Jan 2013 12:23:31 PM PST

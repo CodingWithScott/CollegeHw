@@ -1,0 +1,27 @@
+
+int tmin();
+int test_tmin();
+int isAsciiDigit(int);
+int test_isAsciiDigit(int);
+int conditional(int, int, int);
+int test_conditional(int, int, int);
+int allEvenBits();
+int test_allEvenBits();
+int implication(int, int);
+int test_implication(int, int);
+int isLessOrEqual(int, int);
+int test_isLessOrEqual(int, int);
+int bang(int);
+int test_bang(int);
+int howManyBits(int);
+int test_howManyBits(int);
+int byteSwap(int, int, int);
+int test_byteSwap(int, int, int);
+int leastBitPos(int);
+int test_leastBitPos(int);
+int logicalShift(int, int);
+int test_logicalShift(int, int);
+unsigned float_neg(unsigned);
+unsigned test_float_neg(unsigned);
+int float_f2i(unsigned);
+int test_float_f2i(unsigned);

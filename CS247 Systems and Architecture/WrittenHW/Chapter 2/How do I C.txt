@@ -1,0 +1,7 @@
+***** Useful links for C *****
+IO stuff
+http://beej.us/guide/bgc/output/html/multipage/scanf.html
+http://www.maths.cam.ac.uk/undergrad/catam/ccatsl/manual/node56.html
+http://www.codingunit.com/printf-format-specifiers-format-conversions-and-formatted-output
+
+http://www.cs.cf.ac.uk/Dave/C/node4.html
