@@ -1,0 +1,25 @@
+echo msh test script!
+aecho Testing aecho first
+gcc -o arglist -Wall arglist.c
+./arglist a b c d e f g h i j k l m n o p q r s t u v w x y z 
+echo
+  ./arglist  a   b   c   d
+echo
+./arglist "arguments are fun!"
+echo
+./arglist more" "arguments" "are" "fun! "So, what did we "get?
+echo
+./arglist thi"s is a s"ingl"e a"rg
+echo
+echo "how about null quotes"
+./arglist "" That was a null argument!
+echo
+echo Testing aecho
+aecho
+aecho a b c d e f g
+aecho "abc def ghi   " klm
+echo Testing aecho with -n
+aecho -n a b c
+aecho d e f
+
+exit 2

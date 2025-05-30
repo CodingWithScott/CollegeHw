@@ -1,0 +1,33 @@
+echo msh test script for assignment 3!
+aecho
+aecho Ok, now lets us try some environmental issues ...
+aecho ${A}
+aecho ${ABC}
+aecho ${A} ${A}
+aecho "${A3z}    ${A3z}     ${A3z}    "
+aecho "${A3z}    ${A}     ${ABC}    "
+aecho
+envset XYZ "This is XYZ"
+aecho XYZ is ${XYZ}.
+envset XYZ2 R-XYZ-2
+aecho ${XYZ2}
+envunset XYZ
+aecho XYZ is now '${XYZ}'.
+aecho
+aecho Some other forms .....
+aecho "...  ${A} ..."
+aecho "...  $A} ..."
+aecho "...  $ {A} ..."
+aecho
+aecho Testing cd and other expansion
+mkdir testdir
+cd testdir
+cp ../checkppid.c .
+gcc -g -Wall -o checkppid checkppid.c
+ls
+./checkppid $$
+aecho
+aecho Another cd test
+cd
+pwd
+exit 37

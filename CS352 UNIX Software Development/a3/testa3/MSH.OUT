@@ -1,0 +1,25 @@
+msh test script for assignment 3!
+
+Ok, now lets us try some environmental issues ...
+env A
+env ABC
+env A env A
+env A3z    env A3z     env A3z    
+env A3z    env A     env ABC    
+
+XYZ is This is XYZ.
+R-XYZ-2
+XYZ is now ''.
+
+Some other forms .....
+...  env A ...
+...  $A} ...
+...  $ {A} ...
+
+Testing cd and other expansion
+checkppid
+checkppid.c
+Arg is ppid!
+
+Another cd test
+/usr/bin

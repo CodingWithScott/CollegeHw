@@ -1,0 +1,183 @@
+#! /bin/bash
+#
+# Test msh (assgn 3/spring 2001) for CS 352 ...
+# Modified for new series Spring 2005
+# Modified for new CVSrep location Winter 2013
+#
+PREFIX=/home
+QTR=f14
+CVSroot=cs352$QTR/CVSrep
+
+if [ x$N = x ] ; then
+  N=3
+fi
+
+if [ x$1 = x-r ] ; then
+   RUNONLY=yes
+   shift
+else
+   RUNONLY=no
+fi
+
+if [ x$1 = x-m ] ; then
+   MAKEREF=true
+   shift
+else
+   MAKEREF=false
+fi
+
+if [ x$1 != x ] ; then
+  TUSER=$1
+  D=d/$TUSER
+  X=y
+else
+  TUSER=`whoami`
+  D=/home/$TUSER/testa$N
+  X=n
+fi
+
+if [ x${TUSER} = x ] ; then
+    echo "Something weird is going on\!"
+    exit 1
+fi
+
+TOP=`pwd`
+
+if [ ${RUNONLY} = no ] ; then
+  rm -rf $D
+fi
+
+if [ ! -d $D ] ; then
+  mkdir -p $D
+  chmod 700 $D
+fi
+
+cd $D
+
+INFO=`pwd`/INFO
+
+if [ ${RUNONLY} = no ] ; then
+  TAG=ASSIGNMENT-$N
+  echo "Getting CVS tag $TAG"
+  if ! cvs -d ${PREFIX}/${TUSER}/${CVSroot} get -r $TAG msh >> ${INFO} 2>&1
+    then
+    rm -rf msh
+    echo "${TUSER}: Could not check out msh with TAG $TAG".
+    TAG=ASSIGNMENT$N
+    if ! cvs -d ${PREFIX}/${TUSER}/${CVSroot} get -r $TAG msh >> ${INFO} 2>&1
+      then
+      rm -rf msh
+      echo "${TUSER}: Could not check out msh with TAG $TAG ".
+      TAG=
+      if ! cvs -d ${PREFIX}/${TUSER}/${CVSroot} get msh >> ${INFO} 2>&1
+	then
+	echo "${TUSER}: Could not check out msh without TAG".
+	ls -ld ${PREFIX}/${TUSER}{,/${CVSroot},/${CVSroot}/{CVSROOT{,/history,/val-tags},msh}}
+	exit 1
+      fi
+    fi
+  fi
+fi
+
+cd msh
+
+
+if [ $X = y ] ; then
+cvs status -v | grep "[RW]" | tee -a ${INFO}
+echo -n "Continue? "
+read ans
+echo Looking for Wall
+grep Wall Makefile
+fi
+
+ls -l >> ${INFO}
+
+
+echo making ...
+
+if ! make >> ${INFO} 2>&1 ; then
+    echo "${TUSER}: Could not make."
+    if ! gcc -o msh *.c >> ${INFO} 2>&1 ; then
+        echo "${TUSER}: Could not compile!"
+        exit 1
+    fi
+fi
+
+if ! test -f msh ; then
+    echo "Did not make executable msh."
+    if ! test -f a.out ; then
+        exit 1
+    fi
+    echo "Found an a.out .... using that."
+    mv a.out msh
+fi
+
+echo testing ...
+
+export A="env A"
+export ABC="env ABC"
+export A3z="env A3z"
+export HOME=/usr/bin
+export TOP
+cp ${TOP}/checkppid.c .
+echo "Big test of msh." >> ${INFO}
+./msh < ${TOP}/msh-script1   > MSH.OUT  2> MSH.ERR
+E1=$?
+echo "Exit status was $E1" >> ${INFO}
+
+if ${MAKEREF} ; then
+    cp MSH.OUT ${TOP}
+fi
+
+if ! diff -a -u ${TOP}/MSH.OUT MSH.OUT > MSH.DIFFS ; then
+    echo "${TUSER}: Output differs." >> ${INFO}
+    echo "------- DIFF ---------" >> ${INFO}
+    cat  MSH.DIFFS >> ${INFO}
+    echo "------- End DIFF ---------" >> ${INFO}
+    echo Big script output differs
+    echo -n "View Diffs? "
+    read ans
+    if [ x$ans = xy ] ; then
+       more MSH.DIFFS
+    fi
+else
+    echo Big script output same
+fi
+if [ $E1 -ne 37 ] ; then
+    echo Bad exit status
+else
+    echo Good exit status
+fi
+
+unset HOME
+B="0123456789012345678901234567890123456789012345678901234567890123456789"
+export BIG=${B}${B}${B}${B}${B}${B}${B}${B}${B}${B}
+echo
+echo Testing Errors
+./msh <<EOF
+aecho Test: Next line should have a missing } error
+aecho \${A
+aecho Test: Next two lines should be "cd" errors
+cd notadir
+cd
+aecho Test: Next line should be an expansion overflow error
+echo \${BIG} \${BIG}
+aecho  Test: Error Testing Done
+EOF
+
+echo
+echo "Tests done!"
+echo -n "View INFO? "
+read ans
+if [ x$ans = xy ] ; then more ${INFO} ;  fi;
+
+if [ $X = n ] ; then
+   echo -n "Remove $D? "
+   read ans
+   if [ x$ans = xy ] ; then
+      echo "Removing $D"
+      rm -rf $D
+   fi
+fi
+
+
