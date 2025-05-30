@@ -1,0 +1,46 @@
+if (string < 70)
+	return string;
+else
+	if (string @ 70 = space)
+		return string(70) + \n + trim(substring(70 to the end)
+	else
+		loop to a space
+		return string (70 + loop index) + \n + trim(substring(70+index to the end)
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	// Found this crazy recursive algorithm pseudocode for trimming down strings, going to try it out here
+	private String Trim(String input) {
+		// Base case: input is less than maxLength, just return and do nothing else
+		if (input.length() < maxLength) {
+			return input;
+		}
+		// Otherwise if input is greater than maxLength then need to split
+		else {
+			/* If able to do an even split at maxLength character then return the first section,
+			 * insert a newline, and call Trim() on remaining length of line. */
+			if (input.charAt(maxLength) == ' ') {
+				return input.substring(0, maxLength-1) + System.getProperty("line.separator") + 
+						Trim(input.substring(maxLength, input.length()));
+			}
+			/* Otherwise loop through from char at maxLength backwards to find the first space,
+			 * and call Trim for the substring from beginning to the first space it found.
+			 */
+			else {
+				for (int i = maxLength; i > 0; i--) {
+					if(input.charAt(i) == ' ') { 
+						return input.substring(0,  i) + System.getProperty("line.separator") + 
+								Trim(input.substring(i, maxLength));
+					}
+				}
+			}	
+		}
+		
+		return null;
+	} 

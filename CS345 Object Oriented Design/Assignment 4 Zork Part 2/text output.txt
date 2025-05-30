@@ -1,0 +1,60 @@
+Welcome to your adventure. Have a good game. You are on a balcony facing 
+west, overlooking a beautiful garden. The only exit from the balcony is 
+behind you.
+ ?go in
+ You are in the north end of the Big Room. The room extends south from 
+here. There is an exit to the outside to the west. There is a gold coin 
+here.
+ ?go south
+ You are in the south end of the Big Room. The room extends north from 
+here. There is a door in the east wall.
+ ?go east
+ You have entered the ballroom. The room has a high ceiling with two 
+magnificent crystal chandeliers which illuminate the room. The floor is 
+a polished wooden parquet with flowers inlaid around the edge. The north 
+wall is lined with mirrors while the south wall has large windows which 
+look out on a beautiful garden. There is a door in the west wall of the 
+room. There is a piece of paper here.
+ ?get paper
+ You're now carrying a piece of paper.
+ ?go west
+ You are in the south end of the Big Room. The room extends north from 
+here. There is a door in the east wall.
+ ?go north
+ You are in the north end of the Big Room. The room extends south from 
+here. There is an exit to the outside to the west. There is a gold coin 
+here.
+ ?get coin
+ You're now carrying a gold coin.
+ ?look around
+ You are in the north end of the Big Room. The room extends south from 
+here. There is an exit to the outside to the west.
+ ?go south
+ You are in the south end of the Big Room. The room extends north from 
+here. There is a door in the east wall.
+ ?inventory
+ You are carrying a piece of paper ,a gold coin .
+?examine coin
+ It's a US golden double eagle.
+ ?drop coin
+ You've dropped a gold coin.
+ ?examine paper
+ It's a piece of paper with some writing on it.
+ ?read message
+ The message says, "Enjoy your game."
+ ?inventory
+ You are carrying a piece of paper .
+?drop paper
+ You've dropped a piece of paper.
+ ?inventory
+ You are not carrying anything.
+ ?magic
+ You are in the magic workshop. There are no doors in any of the walls.
+ 
+?magic
+ You are in the south end of the Big Room. The room extends north from 
+here. There is a door in the east wall. There is a coin ,and a paper 
+here.
+ ?quit
+ You used 0 commands and made 8 moves. Hope you enjoyed your game. Come 
+back and play again.

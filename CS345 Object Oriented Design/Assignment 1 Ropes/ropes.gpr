@@ -1,0 +1,25 @@
+project Ropes is
+
+   for Source_Dirs use (".", "aunit", "test");
+   for Object_Dir use "obj";
+   for Exec_Dir use ".";
+   for Main use ("test_ropes.adb");
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-gnat2005", "-gnato", "-gnata", "-gnatwa", "-gnatVa", "-g");
+   end Compiler;
+
+   package Builder is
+      for Default_Switches ("ada") use ("-g");
+   end Builder;
+
+   package Linker is
+      for Default_Switches ("ada") use ("-g");
+   end Linker;
+
+   package Binder is
+      for Default_Switches ("ada") use ("-E");
+   end Binder;
+
+end Ropes;
+

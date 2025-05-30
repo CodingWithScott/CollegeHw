@@ -1,0 +1,12 @@
+-- Scott Felch
+-- 9 June 2013
+-- CSCI 345
+-- Assignment 1 Ropes Part 3
+
+The easiest way I can think of to go about appending or prepending additional text to a rope without traversing all
+the way down to the leaf nodes and manipulating them would be to add a data field to the definition of Rope so that 
+it would have a Prefix and an Affix field which are both pointers to Ropes. That way if you do an Append or Prepend
+call then all you have to do is construct a new Rope as usual, and have the current existing Rope then point to the
+newly created Rope. Then when traversing/printing a Rope you could do in-order traversal and just look for Prefix
+and Affix nodes. This still seems like it would be an awful lot of work to implement though and there's probably a 
+much more elegant solution but this would be my best guess. 

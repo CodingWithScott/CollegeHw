@@ -1,0 +1,73 @@
+NOTE: If you run "inventory" and there's nothing in it (ie, after 
+putting the cloak on the hook) a null pointer exception happens. So just
+don't do that, and the game seems to be fine! :)
+
+
+
+
+The Cloak of Darness (Version 0.1) Hurrying through the rain swept 
+November night, you're glad to see the bright lights of the Opera House. 
+It's surprising that there aren't more people about; but, what do you 
+expect in a CS assignment
+ ...? You are standing in a spacious hall, 
+splendidly decorated in red and gold, with glittering chandeliers 
+overhead. The entrance from the street is to the north, and there are 
+doorways south and west.
+ ?inventory
+ You are carrying: a velvet cloak (worn) .
+?go south
+ It is dark in here!
+ ?examine cloak
+ It's dark in here.
+ ?look east
+ I have a better idea: let's get out of here before you disturb 
+anything.
+ ?look west
+ I have a better idea: let's get out of here before you disturb 
+anything.
+ ?go out
+ You are in the hall.
+ ?examine cloak
+ It is a handsome cloak, of velvet trimmed with satin, and slightly 
+spattered with raindrops. Its blackness is so deep that it almost seems 
+to suck light from the room.
+ ?drop cloak
+ I don't know how to "drop cloak".
+ ?go west
+ The walls of this small room were clearly once lined with hooks, though 
+now only one remains. The exit is a door to the east. There is a brass 
+hook here.
+ ?examine hook
+ It's just a small brass hook, screwed into the wall.
+ ?hang cloak
+ You hang the cloak on the hook.
+ ?go out
+ You are in the hall.
+ ?go south
+ You are in the bar. There seems to be some sort of message scrawled in 
+the sawdust on the floor.
+ ?look around
+ The bar, much rougher than you'd have guessed after the opulence of the 
+foyer to the north, is completely empty. There seems to be some sort of 
+message scrawled in the sawdust on the floor.
+ ?verbose yes
+
+ ?go out
+ You are standing in a spacious hall, splendidly decorated in red and 
+gold, with glittering chandeliers overhead. The entrance from the street 
+is to the north, and there are doorways south and west.
+ ?go south
+ The bar, much rougher than you'd have guessed after the opulence of the 
+foyer to the north, is completely empty. There seems to be some sort of 
+message scrawled in the sawdust on the floor.
+ ?verbose no
+
+ ?go out
+ You are in the hall.
+ ?go south
+ You are in the bar. There seems to be some sort of message scrawled in 
+the sawdust on the floor.
+ ?rease message
+ I didn't understand rease
+ ?read message
+ The message neatly marked in the sawdust reads... YOU HAVE WON !!!

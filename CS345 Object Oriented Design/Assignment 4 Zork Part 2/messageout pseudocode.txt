@@ -1,0 +1,19 @@
+if (1st word in line) 
+	if (curr_word'length < max_length)
+		print curr_word
+		increment line_length
+	else if (curr_word'length > max_length)
+		print curr_word + new_line
+		reset line_length
+
+else if !(1st word in line)
+	if (curr_word'length < max_length) 
+		if (curr_word'length + line_length > max_length)
+			print new_line
+			reset line_length
+		else if (curr_word'length + line_length < max_length)
+			print " " + curr_word
+			increment line length
+	else if (curr_word'length > max_length)
+		print new_line
+		reset line_length
