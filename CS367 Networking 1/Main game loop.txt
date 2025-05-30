@@ -1,0 +1,64 @@
+Main game loop
+
+NOTE: phase = global variable
+
+
+Phase 0:
+	set start time (current time)
+	set end time (start time + timeout)
+	Send Phase1 instructions:
+		(schat(SERVER)(PLAN,R#))
+	set Phase = 1
+Phase 1:
+	if timeout (current time > end time)
+		for every player who hasn't chosen phase1 plan
+			issue strike
+			set plan to PASS
+
+		Send Phase2 instructions
+			for every player			
+				for every alliance offered to player
+					if alliance offers >= 2
+						(schat(SERVER)(OFFER,R#,ALLY,ATTACKEE))
+					elif alliance_offers == 1
+						(schat(SERVER)(OFFERL,R#,ALLY,ATTACKEE))
+					elife allince_offers == 0
+						(schat(SERVER)(OFFERL,R#))
+
+		set start time
+		set end time (start time + timeout)
+		set Phase = 2 
+Phase 2:
+	if timeout
+		for every player 
+			if player hasn't accepted/denied a phase2 plan:
+				issue strike
+				set plan to DECLINE
+			elif player has accepted/denied a phase2 plan:
+				send message to ally
+				(schat(SERVER)(ACCEPT,R#,ALLY))
+					or
+				(schat(SERVER)(DENY,R#,ALLY))
+
+
+
+		Send Phase 3 instructions
+			for every player
+				ask if player wishes to attack another player or pass
+
+
+		set start time
+		set end time
+		set Phase = 3
+Phase 3:
+	if timeout
+		battles to do = all players who agreed to attack another player
+
+		for every battle to do (implementation for storing battles TBD)
+			send battle notification
+			compute battle results
+
+		send sstat
+
+
+		If not game_over, set phase = 1

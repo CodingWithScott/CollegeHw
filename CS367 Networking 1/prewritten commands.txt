@@ -1,0 +1,68 @@
+				PHASE 1: Generate offers
+GRACE, pass turn:								
+(cchat(SERVER)(PLAN,1,PASS))
+
+KAT, offer to ally with SCOTT to attack GRACE:	
+(cchat(SERVER)(PLAN,1,APPROACH,SCOTT,GRACE))
+
+SCOTT, offer to ally with GRACE to attack KAT:	
+(cchat(SERVER)(PLAN,1,APPROACH,GRACE,KAT))
+
+
+				PHASE 2: Receive offers from your allies
+GRACE should receive:
+(schat(SERVER)(OFFERL,1,SCOTT,KAT))				DONE!
+
+KAT should receive:
+(schat(SERVER)(OFFERL,1))						DONE!
+
+SCOTT should receive:
+(schat(SERVER)(OFFERL,1,KAT,GRACE))				DONE!
+
+
+	Ally responds to offer
+GRACE, accepting SCOTT's alliance request against KAT
+(cchat(SERVER)(ACCEPT,1,SCOTT))
+
+SCOTT, declining KAT's alliance request against GRACE
+(cchat(SERVER)(DECLINE,1,KAT))
+
+
+
+	######## FUCK IT, DO IT LATER #########
+	Phase 2 summary should read:
+SCOTT declined KAT's offer to attack GRACE
+GRACE accepted SCOTT's offer to attack KAT		DONE!
+	instead says...
+KAT accepted SCOTT's offer to attack GRACE
+SCOTT declined KAT's offer to attack ____
+
+
+
+
+	Player who generated offer gets confirmation of ACCEPT/DENY
+GRACE should receive:
+	nothing because she didn't send an offer
+
+KAT should receive:
+(schat(SERVER)(DECLINE,1,SCOTT))				DONE!
+
+SCOTT should receive:
+(schat(SERVER)(ACCEPT,1,GRACE)					DONE!
+		instead getting:
+	(schat(SERVER)(ACCEPT,1,KAT))
+
+				PHASE 3:
+	Broadcast to all players: 
+(schat(SERVER)(ACTION,R#))
+
+Players respond with
+(cchat(SERVER)(ACTION,1,ATTACK,ATTACKEE))
+	or
+(schat(SERVER)(PASS,1))
+
+After all player responses received, broadcast notification of each battle
+(schat(SERVER)(NOTIFY,R#,ATTACKER,ATTACKEE))
+
+Compute battle results, send an sstat. 
+Loop back to Phase 1.
