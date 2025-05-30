@@ -1,0 +1,18 @@
+Veganist                      Kathy Freston                 Weinstein Publishing          2011 1 1602861331 25.00 hardcover
+
+Title_Place_Holder_12345678901
+Author_Place_Holder_1234567890
+Publisher_Place_Holder_1234567
+1901
+1
+1234567890
+0.00
+hardcover
+
+Title (title_str, 30 char string)
+Author (title_str, 30 char string)
+Publisher (title_str, 30 char string)
+Year (integer range 1901-2099)
+ISBN (ISBN_type, 10 char string)
+Price (dollars)
+Format (enumerated: hardcover, paperback, ebook)

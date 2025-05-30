@@ -1,0 +1,115 @@
+Book with ISBN 030746363X not found in the collection.  Cannot add to stock
+Book with ISBN 0123456789 not found in the collection.  Cannot add to stock
+Book with ISBN 1455503304 not found in the collection.  Cannot add to stock
+Book with ISBN 0316037915 has insufficient stock for sale
+Book with ISBN 0123456789 not found in the collection.  Cannot change price
+Book with ISBN 1401324312 has insufficient stock for sale
+
+First collection
+****************
+Silverlicious                 Victoria Kann                 HarperCollins                  2011 0061781231 $     17.99  24 HARDCOVER        
+
+Strengths Finder              Tom Rath                      Gallup Press                   2007 159562015X $     17.98  0 HARDCOVER         
+
+Heaven is for Real            Todd Burpo                    Nelson, Thomas, Inc.           2010 0849946158 $     16.99  2 PAPERBACK         
+
+Veganist                      Kathy Freston                 Weinstein Publishing           2011 1602861331 $     25.00  0 HARDCOVER         
+
+Tick Tock                     James Patterson               Little, Brown & Company        2011 0316037915 $     17.99  0 HARDCOVER         
+
+Unbroken                      Laura Hillenbrand             Random House Publishing        2010 1400064163 $     27.00  10 HARDCOVER        
+
+Cancer                        Ty Bollinger                  Ty Bollinger                   2006 0978806506 $     32.95  5 PAPERBACK         
+
+In the Blink of an Eye        Michael Waltrip               Hyperion                       2011 1401324312 $     24.99  0 HARDCOVER         
+
+The 5 Love Languages          Gary Chapman                  Moody Publishers               2010 0802473156 $     14.99  0 PAPERBACK         
+
+Battle Hymn of the Tiger ...  Amy Chua                      Penguin Group (USA)            2011 1594202842 $     25.95  5 HARDCOVER         
+
+Battle Hymn of the Tiger ...  Amy Chua                      Penguin Group (USA)            2011 1101475455 $     12.99  0 EBOOK             
+
+Known and Unknown             Donald Rumsfeld               Sentinal HC                    2011 159523067X $     19.98  0 HARDCOVER         
+
+The Girl Who Kicked Over ...  Stieg Larson                  Knopf                          2010 030726999X $     27.95  0 HARDCOVER         
+
+Moon Over Manifest            Clare Vanderpool              Delacorte Books                2010 0385738838 $     16.99  0 HARDCOVER         
+
+West of Here                  Johnathan Evison              Algonquin Books                2011 1565129520 $     24.95  0 HARDCOVER         
+
+Lord of Misrule               Jaimy Gordon                  McPherson                      2010 0929701836 $     25.00  2 HARDCOVER         
+
+The total value of this collection is $ 1080.33
+Book with ISBN 159523067X not found in the collection.  Cannot add to stock
+Book with ISBN 1565129520 not found in the collection.  Cannot add to stock
+Book with ISBN 0385738838 not found in the collection.  Cannot process sale
+Book with ISBN 1101475455 not found in the collection.  Cannot change price
+Book with ISBN 0316037915 has insufficient stock for sale
+Book with ISBN 159562015X not found in the collection.  Cannot change price
+Book with ISBN 1455503304 has insufficient stock for sale
+
+Second collection
+*****************
+Veganist                      Kathy Freston                 Weinstein Publishing           2011 1602861331 $     25.00  1 HARDCOVER         
+
+Water for Elephants           Sara Gruen                    Algonquin Books                2007 0123456789 $      5.00  0 EBOOK             
+
+The Girl Who Kicked Over ...  Stieg Larson                  Knopf                          2010 030726999X $     24.95  12 HARDCOVER        
+
+Tick Tock                     James Patterson               Little, Brown & Company        2011 0316037915 $     17.99  3 HARDCOVER         
+
+Unbroken                      Laura Hillenbrand             Random House Publishing        2010 1400064163 $     27.00  0 HARDCOVER         
+
+The 4-Hour Body               Timothy Ferris                Crown Publishing Group         2010 030746363X $     27.00  10 HARDCOVER        
+
+The Lean belly Prescription   Travis Stork                  Rodale Press, Inc              2010 1609610237 $     24.99  0 HARDCOVER         
+
+The Investment Answer         Daniel Goldie                 Business Plus                  2011 1455503304 $     18.00  0 HARDCOVER         
+
+Silverlicious                 Victoria Kann                 HarperCollins                  2011 0061781231 $     15.99  15 HARDCOVER        
+
+The total value of this collection is $  888.30
+
+Third collection
+****************
+Silverlicious                 Victoria Kann                 HarperCollins                  2011 0061781231 $     15.99  39 HARDCOVER        
+
+Strengths Finder              Tom Rath                      Gallup Press                   2007 159562015X $     17.98  0 HARDCOVER         
+
+Heaven is for Real            Todd Burpo                    Nelson, Thomas, Inc.           2010 0849946158 $     16.99  2 PAPERBACK         
+
+Veganist                      Kathy Freston                 Weinstein Publishing           2011 1602861331 $     25.00  1 HARDCOVER         
+
+Tick Tock                     James Patterson               Little, Brown & Company        2011 0316037915 $     17.99  3 HARDCOVER         
+
+Unbroken                      Laura Hillenbrand             Random House Publishing        2010 1400064163 $     27.00  10 HARDCOVER        
+
+Cancer                        Ty Bollinger                  Ty Bollinger                   2006 0978806506 $     32.95  5 PAPERBACK         
+
+In the Blink of an Eye        Michael Waltrip               Hyperion                       2011 1401324312 $     24.99  0 HARDCOVER         
+
+The 5 Love Languages          Gary Chapman                  Moody Publishers               2010 0802473156 $     14.99  0 PAPERBACK         
+
+Battle Hymn of the Tiger ...  Amy Chua                      Penguin Group (USA)            2011 1594202842 $     25.95  5 HARDCOVER         
+
+Battle Hymn of the Tiger ...  Amy Chua                      Penguin Group (USA)            2011 1101475455 $     12.99  0 EBOOK             
+
+Known and Unknown             Donald Rumsfeld               Sentinal HC                    2011 159523067X $     19.98  0 HARDCOVER         
+
+The Girl Who Kicked Over ...  Stieg Larson                  Knopf                          2010 030726999X $     24.95  12 HARDCOVER        
+
+Moon Over Manifest            Clare Vanderpool              Delacorte Books                2010 0385738838 $     16.99  0 HARDCOVER         
+
+West of Here                  Johnathan Evison              Algonquin Books                2011 1565129520 $     24.95  0 HARDCOVER         
+
+Lord of Misrule               Jaimy Gordon                  McPherson                      2010 0929701836 $     25.00  2 HARDCOVER         
+
+Water for Elephants           Sara Gruen                    Algonquin Books                2007 0123456789 $      5.00  0 EBOOK             
+
+The 4-Hour Body               Timothy Ferris                Crown Publishing Group         2010 030746363X $     27.00  10 HARDCOVER        
+
+The Lean belly Prescription   Travis Stork                  Rodale Press, Inc              2010 1609610237 $     24.99  0 HARDCOVER         
+
+The Investment Answer         Daniel Goldie                 Business Plus                  2011 1455503304 $     18.00  0 HARDCOVER         
+
+The total value of this collection is $ 1920.63
