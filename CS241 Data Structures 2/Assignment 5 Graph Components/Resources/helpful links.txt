@@ -1,0 +1,2 @@
+http://www.cs.bu.edu/teaching/c/graph/linked/
+http://en.wikipedia.org/wiki/Transpose_graph

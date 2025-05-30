@@ -1,0 +1,145 @@
+-- heap_package.adb:  implementation of a heap using an array
+-- http://cs.fit.edu/~ryan/ada/programs/tree/heap_package-adb.html
+
+with Ada.Integer_Text_IO, Ada.Text_IO;
+use  Ada.Integer_Text_IO, Ada.Text_IO;
+
+package body Heap_Pack is
+
+					--#################################################--
+					--############### Helper Functions ################--
+					--#################################################--
+	--Converts entire string into lower case
+	function ToLower (input : varying_string) return varying_string is
+		new_string  : varying_string := input;		-- New string with all lower case chars
+		curr_char	: character;					-- Current character being analyzed
+	begin
+		for count in 1 .. input.length loop
+			-- Convert curr_char to a lower case and store it in new_string
+			curr_char := ToLower(input.value(count));
+			new_string.value(count) := curr_char;
+		end loop;
+		return new_string;
+	end ToLower;
+	
+	-- Convert individual character to lower case
+	function ToLower (input : character) return character is
+	begin
+		-- If character is an upper case letter, add 32 from its ASCII value to make it lower case, otherwise just return the character untouched.
+		if character'pos(input) in 65 .. 90 then
+			return character'val(character'pos(input) + 32);
+		else	
+			return input;
+		end if;
+	end ToLower;
+	
+	-- 
+	function Hash (name : varying_string) return integer is
+		Temp_Name : varying_string(20) := tolower(name);
+	begin
+		-- Add the ASCII values for first two letters in the name, letters have already been converted to lower case. A=0, B=1, etc
+		return (character'pos(temp_name.value(1)) - 97) + (character'pos(temp_name.value(2)) - 97)+ (character'pos(temp_name.value(3)) - 97)+ (character'pos(temp_name.value(4)) - 97);
+	end Hash;
+
+	function Find_Candidate(input_name : in varying_string; Dictionary : Dictionary_Array) return Candidate_ptr is
+	--	temp_ptr : candidate_ptr := Dictionary(Hash(L_name));		
+		L_name 	: varying_string(20) := tolower(input_name);
+		Out_ptr : candidate_ptr := dictionary(hash(l_name));
+	begin
+																	-- NEED TO HANDLE COLLISIONS STILL
+--		out_ptr := Dictionary(Hash(L_name));
+		return out_ptr;
+	end Find_Candidate;
+
+	-- Overloaded Put statement for use with Varying_Strings, otherwise some garbage characters are printed.		
+	procedure Put(input : in Varying_string) is		
+	begin
+		for I in 1 .. input.length loop
+			put(input.value(I));
+		end loop;
+	end Put; 
+
+	function Greater_than (A, B : varying_string; Dictionary : Dictionary_array) return boolean is
+	begin
+		return find_candidate(A).votes > find_candidate(B).votes;
+	end;
+
+	procedure Swap (Left, Right : in out Varying_String) is
+		Temp: constant Varying_String(20) := Left;
+	begin
+		Left := Right;  Right := Temp;
+	end Swap;
+
+	-- The calculation assumes that the root of the heap is index 1
+	function Left_Subtree (I: Positive) return Positive is
+	begin
+		return I*2;
+	end Left_Subtree;
+
+	-- The calculation assumes that the root of the heap is index 1
+	function Right_Subtree (I: Positive) return Positive is
+	begin
+		return I*2 + 1;
+	end Right_Subtree;
+
+	-- The calculation assumes that the root of the heap is index 1
+	function Parent_Index (I: Positive) return Positive is
+	begin
+		return I/2;
+	end Parent_Index;
+
+	-- Return the index of the root node's child with the larger key.
+	function Larger_Child (Heap: Heap_Array;
+						   Root: Positive
+						   Dictionary : in out dictionary_array) return Positive is
+		Left_Child  : constant Positive := Left_Subtree (Root);
+		Right_Child : constant Positive := Right_Subtree (Root);
+	begin
+		if Right_Child <= Heap'Last and then
+		not (Heap(Left_Child) > Heap(Right_Child)) then
+			return Right_Child;
+		else
+			-- There must be a left subtree, since the root is not a leaf
+			-- and this is a heap.
+			return Left_Child;
+		end if;
+	end Larger_Child;
+
+	-- Assuming that the root of the heap is the only element out of
+	-- place, restore the heap property:  not (Heap(Child) > Heap(Parent))
+	procedure Reheap_Down (Heap : in out Heap_Array; Dictionary : in out dictionary_array) is
+		Root      : Positive := Heap'First;
+		Max_Child : Positive;  -- Index of child with larger key
+	begin
+		while Root <= Heap'Last/2 loop
+			Max_Child := Larger_Child (Heap, Root, Dictionary);
+			exit when not (Heap(Max_Child)>Heap(Root));
+			Swap (Heap(Max_Child), Heap(Root));
+			Root := Max_Child;
+		end loop;
+	end Reheap_Down;
+
+	-- Assuming that the last leaf of the heap is the only element out of
+	-- place, restore the heap property:  not (Heap(Child) > Heap(Parent))
+	procedure Reheap_Up (Heap : in out Heap_Array; Dictionary : in out dictionary_array) is
+		Bottom: Positive := Heap'Last;
+		Parent: Positive;  -- Index of the parent of Bottom
+	begin
+		while Bottom > Heap'First loop
+			Parent := Parent_Index (Bottom);
+			exit when not greater_than(Heap(Bottom), Heap(Parent), Dictionary);
+			Swap (Heap(Parent), Heap(Bottom));
+			Bottom := Parent;
+		end loop;
+		end Reheap_Up;
+
+	procedure Heapify (Heap: in out Heap_Array; Dictionary : in out dictionary_array) is
+		Last_Interior_Node: constant Positive := Heap'Last / 2;
+	begin
+		pragma Assert (Heap'First=1);
+		for I in reverse 1..Last_Interior_Node loop
+			Reheap_Down (Heap(I..Heap'Last), Dictionary);
+		end loop;
+	end Heapify;
+
+end Heap_Pack;
